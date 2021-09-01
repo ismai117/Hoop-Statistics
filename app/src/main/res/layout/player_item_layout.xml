@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/player_image"
+            android:layout_width="40dp"
+            android:src="@drawable/placeholder"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="120dp"
+            android:hint="Precious \nAchiuwa"
+            android:lineSpacingExtra="3dp"
+            android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_weight="3"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+
+
+           <TextView
+               android:gravity="center"
+               android:hint="122222"
+               android:layout_weight="1"
+               android:id="@+id/player_team"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:textSize="13sp" />
+
+           <TextView
+               android:maxWidth="30dp"
+               android:hint="122222"
+               android:gravity="center"
+               android:layout_weight="1"
+               android:id="@+id/player_position"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:textSize="13sp" />
+
+           <TextView
+               android:gravity="center"
+               android:hint="122222"
+               android:layout_weight="1"
+               android:textColor="@color/black"
+               android:id="@+id/player_number"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="13sp" />
+
+       </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

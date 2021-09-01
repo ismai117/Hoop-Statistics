@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".view.PlayerProfile_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:background="#008348"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/backtohome"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/back" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/teamImage_frag"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:scaleType="centerCrop" />
+
+
+            <ImageView
+                android:id="@+id/playerImage_frag"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/teamImage_frag"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop" />
+
+
+            <TextView
+
+                android:id="@+id/teamName_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="140dp"
+                android:layout_toRightOf="@id/playerImage_frag"
+                android:text="Brooklyn nets"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/bar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/teamName_frag"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/teamName_frag"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/playernumber_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/teamName_frag"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bar1"
+                android:text="#12"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/bar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/teamName_frag"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/playernumber_frag"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/playerposition_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/teamName_frag"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bar2"
+                android:text="guard forward"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/playerName_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teamName_frag"
+                android:layout_alignStart="@id/teamName_frag"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:background="#008348"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/ppgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPG" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/ppgValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/sides2border"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/rpgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RPG" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/rpgValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/apgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="APG" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/apgValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_frag"/>
+
+</FrameLayout>
