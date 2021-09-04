@@ -1,6 +1,10 @@
 package com.nbaengine.hoopstatistics.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -8,8 +12,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,6 +33,8 @@ import com.nbaengine.hoopstatistics.network.ApiClient;
 import com.nbaengine.hoopstatistics.service.PlayerService;
 import com.nbaengine.hoopstatistics.viewmodel.PlayerViewModel;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -38,13 +47,16 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class MainActivity extends AppCompatActivity implements PlayerBtnInterface, AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements PlayerBtnInterface {
 
 
     private List<PlayerResponse> playerList;
     private List<TeamResponse> teamList;
     private PlayerViewModel playerViewModel;
     private PlayerAdapter adapter;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @BindView(R.id.player_recycler_view)
     RecyclerView player_recyclerView;
@@ -60,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements PlayerBtnInterfac
         ButterKnife.bind(this);
 
 
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Hoop Statistics");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
         player_recyclerView.setHasFixedSize(true);
         player_recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -80,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements PlayerBtnInterfac
                 } else {
                     Log.d("playerlist", "failed");
                     progressBar.setVisibility(View.VISIBLE);
+
                 }
             }
         });
@@ -101,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements PlayerBtnInterfac
 
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -118,13 +135,6 @@ public class MainActivity extends AppCompatActivity implements PlayerBtnInterfac
 
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }

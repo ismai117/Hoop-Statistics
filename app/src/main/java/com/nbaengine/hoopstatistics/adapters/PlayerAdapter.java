@@ -1,9 +1,12 @@
 package com.nbaengine.hoopstatistics.adapters;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +19,8 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -24,7 +29,9 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
 
 
     private List<PlayerResponse> playerList;
-    private PlayerBtnInterface playerBtnInterface;
+    private final PlayerBtnInterface playerBtnInterface;
+
+
 
     public PlayerAdapter(List<PlayerResponse> playerList, PlayerBtnInterface playerBtnInterface) {
         this.playerList = playerList;
@@ -67,6 +74,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
         }
         return 0;
     }
+
 
     static class PlayerViewHolder extends RecyclerView.ViewHolder{
 

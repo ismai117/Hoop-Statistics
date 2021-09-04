@@ -13,7 +13,9 @@ import retrofit2.http.Query;
 
 public interface PlayerService {
 
-    @GET("players/firstname?firstname=jaylen")
+    ///
+
+    @GET("players")
     Call<List<PlayerResponse>> getPlayer(
             @Header("x-rapidapi-host") String host,
             @Header("x-rapidapi-key") String key

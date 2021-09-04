@@ -7,43 +7,35 @@
     tools:context=".view.MainActivity">
 
 
-    <LinearLayout
-        android:id="@+id/banner"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@drawable/bg_gradient"
         android:gravity="center_vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Hoop Statistics"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <LinearLayout
-        android:layout_marginTop="40dp"
-        android:layout_below="@id/banner"
         android:id="@+id/detailTitle_layout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="170dp"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <TextView
-                android:gravity="center"
                 android:id="@+id/player_title"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:lineSpacingExtra="3dp"
                 android:text="Player"
                 android:textColor="@color/black"
@@ -53,39 +45,39 @@
 
 
         <LinearLayout
-            android:layout_weight="3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
 
 
             <TextView
-                android:paddingLeft="5dp"
-                android:gravity="center"
-                android:layout_weight="1"
                 android:id="@+id/team_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="5dp"
                 android:text="Team"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <TextView
-                android:paddingLeft="5dp"
-                android:gravity="center"
-                android:layout_weight="1"
                 android:id="@+id/position_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="5dp"
                 android:text="Pos"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <TextView
-                android:gravity="center"
-                android:layout_weight="1"
                 android:id="@+id/number_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="Number"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -97,25 +89,25 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/detailTitle_layout"
         android:id="@+id/player_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/detailTitle_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"/>
 
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 
     <ProgressBar
-        android:layout_centerInParent="true"
+        android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progress"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
