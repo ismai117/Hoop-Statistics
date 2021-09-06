@@ -15,7 +15,7 @@ public interface PlayerService {
 
     ///
 
-    @GET("players")
+    @GET("players/firstname?firstname=jaylen")
     Call<List<PlayerResponse>> getPlayer(
             @Header("x-rapidapi-host") String host,
             @Header("x-rapidapi-key") String key
